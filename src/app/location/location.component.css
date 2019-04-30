@@ -1,0 +1,60 @@
+.header {
+    background-image: url('/assets/location-full.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 70%;
+    height: 400px;
+    text-align: center;
+}
+
+.header__overlay {
+    background-color: rgba(0, 0, 0, .2);
+    height: 100%;
+}
+
+.header__title {
+    width: 100%;
+    position: absolute;
+    line-height: 400px;
+}
+
+.location {
+    background-color: #ffffff;
+    padding: 2%;
+    font-size: 1em;
+}
+
+.location__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.location__title {
+    color: #000000;
+    text-align: center;
+}
+
+.location__link {
+    color: rgb(123, 164, 219);
+}
+
+.md-6-col {
+    width: 100%;
+}
+
+.md-6-col > * {
+    margin: 2em 0;
+}
+
+@media screen and (min-width: 650px) {
+    .location__title {
+        text-align: left;
+    }
+
+    .md-6-col {
+        width: 50%;
+    }
+  }

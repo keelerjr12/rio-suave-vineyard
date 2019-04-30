@@ -1,0 +1,9 @@
+<div>
+  <h2>Stay in touch!</h2>
+  <h4>Join our mailing list</h4>
+  <form [formGroup]="subscriptionForm" (ngSubmit)="onSubmit()" [ngStyle]="{ display: (isSubscribed === true) ? 'none' : 'block' }">
+    <input type="email" />
+    <button type="submit">Subscribe</button>
+  </form>
+  <p [ngStyle]="{ display: (isSubscribed === true) ? 'block' : 'none' }">Subscribed!</p>
+</div>
