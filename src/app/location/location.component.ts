@@ -4,13 +4,12 @@ import { Component, OnInit } from '@angular/core';
 import { ViewChild } from '@angular/core';
 
 @Component({
-  selector: 'rs-location',
   templateUrl: './location.component.html',
   styleUrls: ['./location.component.css']
 })
 export class LocationComponent implements OnInit {
 
-  @ViewChild('gmap') gmapElement: any;
+  @ViewChild('gmap', null) gmapElement: any;
   map: google.maps.Map;
   origin: google.maps.LatLng = new google.maps.LatLng(36.760955, -107.750840);
 

@@ -1,0 +1,19 @@
+.mailing-list {
+    text-align: center;
+}
+
+.mailing-list__email-wrapper {
+    margin: 10px;
+}
+
+.mailing-list__input {
+    font-size: 1em;
+}
+
+.mailing-list__submit {
+    background-color: #AF2F00;
+    color: #ffffff;
+    font-size: 1em;
+    border: none;
+    padding: 10px 20px;
+}

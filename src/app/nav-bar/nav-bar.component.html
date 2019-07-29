@@ -1,15 +1,13 @@
-<nav class="transparent">
-  <div id="left-subnav" class="md-4-col">
-      <ul>
-        <li routerLinkActive="selected"><a routerLink="/home" class="left-subnav__link">Home</a></li>
-        <li routerLinkActive="selected"><a routerLink="story" class="left-subnav__link">Story</a></li>
-        <li routerLinkActive="selected"><a routerLink="/contact" class="left-subnav__link">Contact</a></li>
-      </ul>
-  </div>
-  <div id="mid-subnav" class="md-4-col">
-    <h1>
-      Rio Suave
-    </h1>
-    <h2>Vineyard</h2>
-  </div>
+<nav class='navbar'>
+  <ul class='navbar__list'>
+      <li class='navbar__item'><a class='navbar__link' routerLink='/home' routerLinkActive='navbar__link--active'>Home</a></li>
+      <li class='navbar__item'><a class='navbar__link' routerLink='/location' routerLinkActive='navbar__link--active'>Location</a></li>
+      <li class='navbar__item'><a class='navbar__link' routerLink='/contact' routerLinkActive='navbar__link--active'>Contact</a></li>
+  </ul>
 </nav>
+<div class='hero-image'>
+  <div class='hero--overlay'>
+      <h1>Rio Suave</h1>
+      <h2>Vineyard</h2>
+  </div>
+</div>

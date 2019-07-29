@@ -1,107 +1,31 @@
-.header {
-  height: 750px;
-}
-
-.header__logo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  overflow: hidden;
-  height: 750px;
-  background-position: center right;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("/assets/main-title.png");
-}
-
-@media screen and (max-width: 900px) {
-  .header, .header__logo  {
-    height: 555px;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .header, .header__logo  {
-    height: 400px;
-  }
-}
-
 .content {
-  background-color: #ffffff;
-  display: inline-block;
-  position: relative;
-}
-
-.content__panel {
-  display: flex;
-  flex-flow: wrap;
-  font-size: 0;
-  justify-content: space-around;
-  margin: 3% 3% 3% 3%;
-}
-
-.content__panel__col {
-  min-width: 300px;
+  background-color: #D9C78B;
+  background-image: linear-gradient(rgba(217, 199, 139), rgba(236, 227, 197));
+  padding: 10px;
   text-align: center;
-  width: 33%;
 }
 
-.content__panel__col__container {
+.content > p {
+  color: #4F4F4F;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+.button {
+  border: 2px solid #4F4F4F;
+  color: #4F4F4F;
+  padding: 10px 20px;
   display: inline-block;
-  height: 100%;
-  position: relative;
 }
 
-.content__panel__col img {
-  min-width: 100%;
-}
-
-.link {
+.button:hover {
+  background-color: #4F4F4F;
   color: #ffffff;
-  font-variant: small-caps;
-  text-decoration: none;
 }
 
-.link--panel {
-  background-color: rgba(0, 0, 0, .4);
-  display: block;
-  font-size: 4rem;
-  height: 100%;
-  line-height: 300px;
-  position: absolute;
-  top: 0;
+.rio-suave-label {
   width: 100%;
-}
-
-.content__about {
-  text-align: center;
-}
-
-.content__about__overlay {
-  background-image: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .75)), url("/assets/vineyard.jpg");
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #ffffff;
-  font-size: 1.5em;
-  max-width: 100%;
-  position: relative;
-}
-
-.content__about__overlay h2 {
-  font-size: 2em;
-}
-
-.content__about__overlay hr {
-  border-color: rgb(123, 164, 219);
-  color: rgb(123, 164, 219);
-  width: 8em;
-}
-
-.link--about {
-  display: inline-block;
-  border: .05em solid rgb(123, 164, 219);
-  margin: 1em 0;
-  padding: 16px 16px;
+  max-width: 960px;
+  height: auto;
+  vertical-align: middle;
 }

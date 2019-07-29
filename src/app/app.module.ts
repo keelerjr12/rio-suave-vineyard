@@ -8,8 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LocationComponent } from './location/location.component';
 import { MailingListComponent } from './mailing-list/mailing-list.component';
-import { StoryComponent } from './story/story.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
@@ -20,13 +19,13 @@ import { ContactComponent } from './contact/contact.component';
     PageNotFoundComponent,
     LocationComponent,
     MailingListComponent,
-    StoryComponent,
     ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,76 +1,57 @@
-nav {
-  width: 100%;
+.navbar {
+  font-size: 1em;
+  height: 50px;
+  text-align: center;
   z-index: 1;
 }
 
-.md-4-col {
-  width: 33%;
+.navbar__list {
+  margin: 0;
+  padding: 0;
 }
 
-.transparent {
-  display: none;
+.navbar__item {
+  display: inline-block;
+  padding: 1em;
 }
 
-.left-subnav__link {
-  line-height: 60px;
-}
-
-@media screen and (min-width: 992px) {
-  .transparent {
-    background-color: rgba(0, 0, 0, .4);
-    display: flex;
-    position: absolute;
-  }
-}
-
-@media screen and (min-width: 1115px) {
-  .left-subnav__link {
-    line-height: 80px;
-  }
-}
-
-#left-subnav {
-  display: flex;
-}
-
-#left-subnav ul {
-  display: flex;
-}
-
-#left-subnav li {
-  padding: 0 .5em;
-}
-
-#left-subnav li:hover {
-  background-color: #000000;
-}
-
-#left-subnav li a {
-  display: block;
+.navbar__link {
   color: #ffffff;
-  font-variant:small-caps;
-  font-size: 2em;
-  text-decoration: none
+  text-decoration-line: none;
 }
 
-#mid-subnav {
+.navbar__link--active {
+  font-weight: 900;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url('/assets/rio-suave-vineyard-blur-960x540.jpg');
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  margin-top: -50px;
+  min-height: 540px;
+  z-index: 2;
+}
+
+.hero--overlay {
+  color: #ffffff;
+  margin: auto;
   text-align: center;
 }
 
-#mid-subnav h1 {
-  font-size: 4em;}
-
-#mid-subnav h2 {
-  letter-spacing: 1.8em;
-  text-indent: 1.8em;
+.hero--overlay h1, .hero--overlay h2 {
+  font-weight: 100;
+  margin: 0;
 }
 
-@media screen and (max-width: 1115px) {
-  nav {
-    font-size: 12px;
-  }
+.hero--overlay > h1 {
+  font-size: 3em;
 }
 
-.selected {
-  background-color: #000000;
+.hero--overlay > h2 {
+  font-size: 2em;
+  letter-spacing: 10px;
+  padding-left: 10px;
 }
