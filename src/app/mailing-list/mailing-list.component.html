@@ -1,9 +1,11 @@
 <div class='mailing-list'>
-  <h3>Join our mailing list</h3>
+  <h3>Join our mailing list!</h3>
   <form [formGroup]="subscriptionForm" (ngSubmit)="onSubmit()" [ngStyle]="{ display: (isSubscribed === true) ? 'none' : 'block' }">
-    <div class='mailing-list__email-wrapper'>
-      <label>Email:</label>
-      <input class='mailing-list__input' type="email" />
+    <div class='mailing-list__email-outer-wrapper'>
+        <div class='mailing-list__email-inner-wrapper'>
+          <label class='mailing-list__label'>Email:</label>
+          <input class='mailing-list__input' type="email" placeholder="johndoe@example.com" />
+        </div>
     </div>
     <button class='mailing-list__submit' type="submit">Subscribe</button>
   </form>

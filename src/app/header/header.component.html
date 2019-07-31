@@ -5,9 +5,9 @@
       <li class='navbar__item'><a class='navbar__link' routerLink='/contact' routerLinkActive='navbar__link--active'>Contact</a></li>
   </ul>
 </nav>
-<div class='hero-image'>
+<div class='hero-image' [ngStyle]="isHome ? hero-image : {'min-height': '250px'}">
   <div class='hero--overlay'>
-      <h1>Rio Suave</h1>
-      <h2>Vineyard</h2>
+      <h1>{{pageTitle}}</h1>
+      <!--<h2>Vineyard</h2>-->
   </div>
 </div>

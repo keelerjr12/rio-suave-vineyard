@@ -8,15 +8,18 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 const routes: Routes = [
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+    data: {title: 'Home'}
   },
   {
     path: 'contact',
-    component: ContactComponent
+    component: ContactComponent,
+    data: {title: 'Contact'}
   },
   {
     path: 'location',
-    component: LocationComponent
+    component: LocationComponent,
+    data: {title: 'Location'}
   },
   {
     path: '',

@@ -33,12 +33,16 @@
   margin-top: -50px;
   min-height: 540px;
   z-index: 2;
+
+  transition-property: min-height;
+  transition-duration: 2s;
 }
 
 .hero--overlay {
   color: #ffffff;
   margin: auto;
   text-align: center;
+
 }
 
 .hero--overlay h1, .hero--overlay h2 {
