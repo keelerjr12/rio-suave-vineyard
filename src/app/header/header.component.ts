@@ -24,13 +24,17 @@ export class HeaderComponent implements OnInit {
         }
       })
     ).subscribe((title: string) => {
-      if (title === 'Home') {
-        this.isHome = true;
-        this.pageTitle = 'Rio Suave Vineyard';
-      } else {
-        this.isHome = false;
-        this.pageTitle = title;
-      }
+      this.setTitle(title);
     });
+  }
+
+  private setTitle(title: string) {
+    if (title === 'Home') {
+      this.isHome = true;
+      this.pageTitle = 'Rio Suave Vineyard';
+    } else {
+      this.isHome = false;
+      this.pageTitle = title;
+    }
   }
 }

@@ -1,13 +1,17 @@
-<nav class='navbar'>
-  <ul class='navbar__list'>
-      <li class='navbar__item'><a class='navbar__link' routerLink='/home' routerLinkActive='navbar__link--active'>Home</a></li>
-      <li class='navbar__item'><a class='navbar__link' routerLink='/location' routerLinkActive='navbar__link--active'>Location</a></li>
-      <li class='navbar__item'><a class='navbar__link' routerLink='/contact' routerLinkActive='navbar__link--active'>Contact</a></li>
-  </ul>
-</nav>
+<div class='secondary_header'>
+  <div>
+      <a href='https://www.facebook.com/pg/Rio-Suave-Vineyard-135469280631789/posts/'>
+        <i class='icon facebook'></i>
+      </a>
+      <a href='https://www.instagram.com/rio_suave_vineyard'>
+        <i class='icon instagram'></i>
+      </a>
+  </div>
+</div>
+<rs-navbar></rs-navbar>
 <div class='hero-image' [ngStyle]="isHome ? hero-image : {'min-height': '250px'}">
   <div class='hero--overlay'>
-      <h1>{{pageTitle}}</h1>
+      <!--<h1>{{pageTitle}}</h1> -->
       <!--<h2>Vineyard</h2>-->
   </div>
 </div>

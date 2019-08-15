@@ -10,6 +10,7 @@ import { LocationComponent } from './location/location.component';
 import { MailingListComponent } from './mailing-list/mailing-list.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ContactComponent } from './contact/contact.component';
     PageNotFoundComponent,
     LocationComponent,
     MailingListComponent,
-    ContactComponent
+    ContactComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,25 @@
+.contact-form {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form__container {
+    width: 80%;
+}
+
+.label {
+    display: block;
+}
+
+.input {
+    width: 100%;
+}
+
+.textarea {
+    height: 150px;
+}
+
+.contact-form__submit-container {
+    display: flex;
+    justify-content: center;
+}

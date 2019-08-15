@@ -29,6 +29,11 @@
     margin: 2em 0;
 }
 
+.map__wrapper {
+    position: relative;
+    z-index: 0;
+}
+
 @media screen and (min-width: 650px) {
     .location__title {
         text-align: left;

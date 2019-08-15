@@ -348,7 +348,7 @@ template {
 }
 
 body {
-  margin: 0 0;
+  margin-bottom: 3em;
   font-family: Lora;
   font-size: 20px;
   font-weight: 100;

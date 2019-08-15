@@ -1,27 +1,24 @@
-.navbar {
-  font-size: 1em;
-  height: 50px;
-  text-align: center;
-  z-index: 1;
+.secondary_header {
+  display: flex;
+  justify-content: flex-end;
 }
 
-.navbar__list {
-  margin: 0;
-  padding: 0;
-}
-
-.navbar__item {
+.icon {
+  background-repeat: no-repeat;
+  background-size: contain;
   display: inline-block;
-  padding: 1em;
+  height: 2em;
+  margin-right: .5em;
+  width: 2em;
+  vertical-align: middle;
 }
 
-.navbar__link {
-  color: #ffffff;
-  text-decoration-line: none;
+.facebook {
+  background-image: url('/assets/facebook.png');
 }
 
-.navbar__link--active {
-  font-weight: 900;
+.instagram {
+  background-image: url('/assets/instagram.png');
 }
 
 .hero-image {
@@ -30,7 +27,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  margin-top: -50px;
+  margin-top: -2em;
   min-height: 540px;
   z-index: 2;
 
@@ -42,7 +39,11 @@
   color: #ffffff;
   margin: auto;
   text-align: center;
-
+  background-image: url('/assets/mobile_logo_fixed_blured.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 350px;
+  width: 350px;
 }
 
 .hero--overlay h1, .hero--overlay h2 {
