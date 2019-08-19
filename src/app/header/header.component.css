@@ -1,6 +1,13 @@
 .secondary_header {
   display: flex;
   justify-content: flex-end;
+  margin-top: .5em;
+}
+
+.secondary_header__link {
+  height: 100%;
+  display: inline-block;
+  padding: 0 .5em;
 }
 
 .icon {
@@ -8,7 +15,6 @@
   background-size: contain;
   display: inline-block;
   height: 2em;
-  margin-right: .5em;
   width: 2em;
   vertical-align: middle;
 }
@@ -27,12 +33,19 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  margin-top: -2em;
-  min-height: 540px;
+  margin-top: -2.5em;
   z-index: 2;
 
   transition-property: min-height;
   transition-duration: 2s;
+}
+
+.hero-image--full {
+  min-height: 540px;
+}
+
+.hero-image--short {
+  min-height: 250px;
 }
 
 .hero--overlay {
@@ -44,19 +57,4 @@
   background-position: center;
   min-height: 350px;
   width: 350px;
-}
-
-.hero--overlay h1, .hero--overlay h2 {
-  font-weight: 100;
-  margin: 0;
-}
-
-.hero--overlay > h1 {
-  font-size: 3em;
-}
-
-.hero--overlay > h2 {
-  font-size: 2em;
-  letter-spacing: 10px;
-  padding-left: 10px;
 }

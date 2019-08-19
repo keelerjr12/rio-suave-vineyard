@@ -1,0 +1,18 @@
+.artwork__image {
+    width: 100%;
+    max-width: 960px;
+    vertical-align: middle;
+  }
+
+.artwork__caption-container {
+    background-color: #f0eeee;
+    height: 2em;
+}
+
+.artwork__caption {
+    color: #000;
+    font-size: .75em;
+    line-height: 1;
+    margin: 0;
+    text-align: right;
+}

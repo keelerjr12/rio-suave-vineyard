@@ -1,17 +1,14 @@
 <div class='secondary_header'>
-  <div>
-      <a href='https://www.facebook.com/pg/Rio-Suave-Vineyard-135469280631789/posts/'>
+  <div class='secondary_header__container'>
+      <a class='secondary_header__link' href='https://www.facebook.com/pg/Rio-Suave-Vineyard-135469280631789/posts/' target='_blank'>
         <i class='icon facebook'></i>
       </a>
-      <a href='https://www.instagram.com/rio_suave_vineyard'>
+      <a class='secondary_header__link' href='https://www.instagram.com/rio_suave_vineyard' target='_blank'>
         <i class='icon instagram'></i>
       </a>
   </div>
 </div>
 <rs-navbar></rs-navbar>
-<div class='hero-image' [ngStyle]="isHome ? hero-image : {'min-height': '250px'}">
-  <div class='hero--overlay'>
-      <!--<h1>{{pageTitle}}</h1> -->
-      <!--<h2>Vineyard</h2>-->
-  </div>
+<div [ngClass]="(isHome == true) ? 'hero-image hero-image--full' : 'hero-image hero-image--short'">
+  <div class='hero--overlay'></div>
 </div>

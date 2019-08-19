@@ -11,6 +11,10 @@ import { MailingListComponent } from './mailing-list/mailing-list.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ContactComponent } from './contact/contact.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ArtworkComponent } from './artwork/artwork.component';
+import { FooterComponent } from './footer/footer.component';
+
+import { AgmCoreModule } from '@agm/core'
 
 @NgModule({
   declarations: [
@@ -21,9 +25,14 @@ import { NavbarComponent } from './navbar/navbar.component';
     LocationComponent,
     MailingListComponent,
     ContactComponent,
-    NavbarComponent
+    NavbarComponent,
+    ArtworkComponent,
+    FooterComponent
   ],
   imports: [
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAKURpa8WrRHysyqCF5vGJrPOuI6G_hx80'
+    }),
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,

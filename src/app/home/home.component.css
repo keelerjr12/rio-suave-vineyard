@@ -1,17 +1,22 @@
-.content {
-  background-color: #D9C78B;
-  background-image: linear-gradient(rgba(217, 199, 139), rgba(236, 227, 197));
-  padding: 10px;
+.home__container {
+  display: grid;
+  grid-template-areas: 
+    'content'
+    'artwork';
+}
+
+.home__content {
+  grid-area: content;
+  padding: 2em 0;
   text-align: center;
 }
 
-.content > p {
+.home__content > p {
   color: #4F4F4F;
-  line-height: 1.5em;
   margin: 0;
 }
 
-.button {
+.home__button {
   border: 2px solid #4F4F4F;
   border-radius: 4px;
   color: #4F4F4F;
@@ -19,14 +24,18 @@
   padding: 10px 20px;
 }
 
-.button:hover {
+.home__button:hover {
   background-color: #4F4F4F;
   color: #ffffff;
 }
 
-.rio-suave-label {
-  width: 100%;
-  max-width: 960px;
-  height: auto;
-  vertical-align: middle;
+.home__artwork {
+  grid-area: artwork;
+}
+
+@media (min-width: 750px) {
+  .home__container {
+    grid-template-areas:
+      'content artwork';
+  }
 }

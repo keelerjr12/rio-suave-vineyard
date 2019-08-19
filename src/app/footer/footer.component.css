@@ -1,0 +1,32 @@
+.footer {
+    background-color: #D9C78B;
+    background-image: linear-gradient(rgba(217, 199, 139), rgba(236, 227, 197));
+    display: grid;
+    grid-template-areas: 
+        'mailing-list'
+        'data'
+        'copyright';
+}
+
+.footer__data {
+    display: inline-block;
+    grid-area: data;
+}
+
+rs-mailing-list {
+    display:inline-block;
+    grid-area: mailing-list;
+}
+
+.footer__copyright {
+    font-size: .75em;
+    grid-area: copyright;
+}
+
+@media (min-width: 550px) {
+    .footer {
+      grid-template-areas:
+        'data mailing-list'
+        'copyright copyright';
+    }
+  }

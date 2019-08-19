@@ -1,5 +1,10 @@
 .mailing-list {
+    padding: 2em 0;
     text-align: center;
+}
+
+.mailing-list__header {
+    margin: 0;
 }
 
 .mailing-list__email-outer-wrapper {

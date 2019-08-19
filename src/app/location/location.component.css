@@ -34,6 +34,11 @@
     z-index: 0;
 }
 
+agm-map {
+    width: 100%;
+    height: 450px;
+}
+
 @media screen and (min-width: 650px) {
     .location__title {
         text-align: left;

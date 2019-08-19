@@ -3,7 +3,8 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #4F4F4F;
+    background-color: #f0eeee;
+    /*background-color: #4F4F4F;*/
     z-index: 1;
   }
 /*
@@ -26,19 +27,23 @@
   display: inline-flex;
   height: 100%;
   vertical-align: middle;
-  width: 33%;
+  width: 33.33%;
 }
 
 .navbar__link {
-  color: #ffffff;
+  /*color: #ffffff; */
+  color: #4f5a65;
   height: 100%;
+  text-align: center;
   text-decoration-line: none;
   width: 100%;
 }
 
 .navbar__link--active {
   font-weight: 900;
-  background-color: #363636;
+  /*background-color: #363636;*/
+  /*background-color:  #c7c5c5;*/
+  color: #4b6a88;
 }
 
 .navbar__icon {
@@ -51,15 +56,27 @@
 }
 
 .navbar__icon--home {
-  background-image: url('/assets/home-icon.png');
+  background-image: url('/assets/home-icon--gray.png');
+}
+
+.navbar__icon-home--active {
+  background-image: url('/assets/home-icon--blue.png');
 }
 
 .navbar__icon--location {
-  background-image: url('/assets/location-icon.png');
+  background-image: url('/assets/location-icon--gray.png');
+}
+
+.navbar__icon-location--active {
+  background-image: url('/assets/location-icon--blue.png');
 }
 
 .navbar__icon--contact {
-  background-image: url('/assets/envelope-icon.png');
+  background-image: url('/assets/envelope-icon--gray.png');
+}
+
+.navbar__icon-contact--active {
+  background-image: url('/assets/envelope-icon--gray.png');
 }
 
 .navbar__linktext {
@@ -67,7 +84,5 @@
 }
 
 @media screen and (min-width: 480px) {
-  .navbar {
-    text-align: right;
-  }
+
 }
