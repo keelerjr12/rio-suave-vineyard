@@ -1,32 +1,3 @@
-.secondary_header {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: .5em;
-}
-
-.secondary_header__link {
-  height: 100%;
-  display: inline-block;
-  padding: 0 .5em;
-}
-
-.icon {
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: inline-block;
-  height: 2em;
-  width: 2em;
-  vertical-align: middle;
-}
-
-.facebook {
-  background-image: url('/assets/facebook.png');
-}
-
-.instagram {
-  background-image: url('/assets/instagram.png');
-}
-
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url('/assets/rio-suave-vineyard-blur-960x540.jpg');
   background-color: #cccccc;
@@ -57,4 +28,10 @@
   background-position: center;
   min-height: 350px;
   width: 350px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-image {
+    margin-top: -195px;
+  }
 }

@@ -1,28 +1,24 @@
 .navbar {
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #f0eeee;
-    /*background-color: #4F4F4F;*/
-    z-index: 1;
-  }
-/*
-  .navbar__logo {
-    display: inline-block;
-    background-image: url('/assets/mobile_logo_150x150.png');
-    height: 150px;
-    width: 150px;
-  }
-  */
-.navbar__list {
-  height: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f0eeee;
+  /*background-color: #4F4F4F;*/
+  z-index: 1;
+}
+
+.navbar__logo {
+  display: none;
+}
+  
+.navbar__menu {
   margin: 0;
   padding: 0;
   z-index: 100;
 }
 
-.navbar__item {
+.navbar__menuitem {
   align-items: center;
   display: inline-flex;
   height: 100%;
@@ -83,6 +79,82 @@
   margin: 0;
 }
 
-@media screen and (min-width: 480px) {
+.navbar__social-media-container {
+  /* TODO: fix this! */
+  display: none;
+  justify-content: flex-end;
+}
 
+.navbar__social-media-link {
+  height: 100%;
+  display: inline-block;
+  padding: 0 5px;
+}
+
+.icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  height: 2em;
+  width: 2em;
+  vertical-align: middle;
+}
+
+.facebook {
+  background-image: url('/assets/facebook.png');
+}
+
+.instagram {
+  background-image: url('/assets/instagram.png');
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    background: none;
+    display: flex;
+    margin-top: 15px;
+    position: relative;
+  }
+
+  .navbar__logo {
+    display: inline-block;
+  }
+
+  .navbar__menu-container {
+    display: inline-flex;
+    width: 90%;
+  }
+
+  .navbar__menu-container-helper {
+    width: 100%;
+  }
+
+  .navbar__menu {
+    margin: 0;
+    width: 100%;
+  }
+
+  .navbar__icon {
+    display: none;
+  }
+
+  .navbar__link {
+    color: #fff;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar__link--active {
+    font-weight: 900;
+    color: #4b6a88;
+  }
+
+  .navbar__menuitem--home {
+    display: none;
+  }
+
+  .navbar__social-media-container {
+    display: flex;
+  }
 }

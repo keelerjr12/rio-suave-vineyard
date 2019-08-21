@@ -1,5 +1,4 @@
 .mailing-list {
-    padding: 2em 0;
     text-align: center;
 }
 
@@ -23,7 +22,8 @@
 }
 
 .mailing-list__input {
-    font-size: 1em;
+    min-width: 320px;
+    line-height: 2em;
 }
 
 .mailing-list__submit {
@@ -36,6 +36,5 @@
         0 1px 5px 0 rgba(0,0,0,.12);
 
     color: #ffffff;
-    font-size: 1em;
     padding: 10px 20px;
 }

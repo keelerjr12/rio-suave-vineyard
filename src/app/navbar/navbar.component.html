@@ -1,23 +1,39 @@
 <nav class='navbar'>
-    <div class='navbar__logo'></div>
-    <ul class='navbar__list'>
-        <li class='navbar__item'>
-            <a class='navbar__link' routerLink='/home' routerLinkActive='navbar__link--active'>
-                <i class='navbar__icon navbar__icon--home' routerLinkActive='navbar__icon-home--active'></i>
-                <p class='navbar__linktext'>Home</p>
-            </a>
-        </li>
-        <li class='navbar__item'>
-            <a class='navbar__link' routerLink='/location' routerLinkActive='navbar__link--active'>                
-                <i class="navbar__icon navbar__icon--location" routerLinkActive='navbar__icon-location--active'></i>
-                <p class='navbar__linktext'>Location</p>
-            </a>
-        </li>
-        <li class='navbar__item'>
-            <a class='navbar__link' routerLink='/contact' routerLinkActive='navbar__link--active'>                
-                <i class="navbar__icon navbar__icon--contact" routerLinkActive='navbar__icon-contact--active'></i>
-                <p class='navbar__linktext'>Contact</p>
-            </a>
-        </li>
-    </ul>
+    <div class='navbar__logo'>
+        <a routerLink='/home' >
+            <img src='../../assets/mobile_logo_150x150.png' style="width: 150px; height: 150px;">
+        </a>
+    </div>
+    <div class='navbar__menu-container'>
+        <div class='navbar__menu-container-helper'>
+            <ul class='navbar__menu'>
+                <li class='navbar__menuitem navbar__menuitem--home'>
+                    <a class='navbar__link' routerLink='/home' routerLinkActive='navbar__link--active'>
+                        <i class='navbar__icon navbar__icon--home' routerLinkActive='navbar__icon-home--active'></i>
+                        <p class='navbar__linktext'>Home</p>
+                    </a>
+                </li>
+                <li class='navbar__menuitem'>
+                    <a class='navbar__link' routerLink='/location' routerLinkActive='navbar__link--active'>                
+                        <i class="navbar__icon navbar__icon--location" routerLinkActive='navbar__icon-location--active'></i>
+                        <p class='navbar__linktext'>Location</p>
+                    </a>
+                </li>
+                <li class='navbar__menuitem'>
+                    <a class='navbar__link' routerLink='/contact' routerLinkActive='navbar__link--active'>                
+                        <i class="navbar__icon navbar__icon--contact" routerLinkActive='navbar__icon-contact--active'></i>
+                        <p class='navbar__linktext'>Contact</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class='navbar__social-media-container'>
+        <a class='navbar__social-media-link' href='https://www.facebook.com/pg/Rio-Suave-Vineyard-135469280631789/posts/' target='_blank'>
+            <i class='icon facebook'></i>
+        </a>
+        <a class='navbar__social-media-link' href='https://www.instagram.com/rio_suave_vineyard' target='_blank'>
+            <i class='icon instagram'></i>
+        </a>
+    </div>
 </nav>

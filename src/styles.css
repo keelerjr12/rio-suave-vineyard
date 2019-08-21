@@ -348,9 +348,15 @@ template {
 }
 
 body {
-  margin-bottom: 3em;
+  margin-bottom: 3.3em;
   font-family: Lora;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 100;
   line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+  }
 }
