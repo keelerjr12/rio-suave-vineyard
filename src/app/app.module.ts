@@ -14,7 +14,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ArtworkComponent } from './artwork/artwork.component';
 import { FooterComponent } from './footer/footer.component';
 
-import { AgmCoreModule } from '@agm/core'
+import { AgmCoreModule } from '@agm/core';
+import { StoryComponent } from './story/story.component'
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AgmCoreModule } from '@agm/core'
     ContactComponent,
     NavbarComponent,
     ArtworkComponent,
-    FooterComponent
+    FooterComponent,
+    StoryComponent
   ],
   imports: [
     AgmCoreModule.forRoot({

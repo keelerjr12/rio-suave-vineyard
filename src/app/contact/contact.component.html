@@ -1,19 +1,19 @@
-<form class='contact-form'>
+<form class='contact-form' [formGroup]='contactForm' (ngSubmit)='submitForm()'> 
   <div class='contact-form__container'>
     <div>
         <label class='label'>Name: </label>
-        <input class='input' type="text" />
+        <input class='input' type="text" formControlName='name' required/>
       </div>
       <div>
         <label class='label'>Email: </label>
-        <input class='input' type="email" />
+        <input class='input' type="email" formControlName='email' required/>
       </div>
       <div>
         <label class='label'>Comments:</label>
-        <textarea class='input textarea' ></textarea>
+        <textarea class='input textarea' formControlName='comments' required></textarea>
       </div>
       <div class='contact-form__submit-container'>
-          <input type="submit" value="Submit">
+          <input type='submit' value='Submit' [disabled]='!contactForm.valid'>
       </div>
   </div>
 </form>

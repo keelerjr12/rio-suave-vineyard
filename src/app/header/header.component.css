@@ -1,10 +1,10 @@
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), url('/assets/rio-suave-vineyard-blur-960x540.jpg');
   background-color: #cccccc;
+  background-position-y: 50%;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  margin-top: -2.5em;
   z-index: 2;
 
   transition-property: min-height;
@@ -26,7 +26,7 @@
   background-image: url('/assets/mobile_logo_fixed_blured.png');
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 350px;
+  min-height: 250px;
   width: 350px;
 }
 

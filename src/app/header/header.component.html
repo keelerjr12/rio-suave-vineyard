@@ -1,5 +1,5 @@
 
 <rs-navbar></rs-navbar>
 <div [ngClass]="(isHome == true) ? 'hero-image hero-image--full' : 'hero-image hero-image--short'">
-  <div class='hero--overlay'></div>
+  <div [ngClass]="(isHome == true) ? 'hero--overlay' : ''"></div>
 </div>
