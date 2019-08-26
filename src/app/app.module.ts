@@ -3,31 +3,28 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { HomeComponent } from './home/home.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { LocationComponent } from './location/location.component';
-import { MailingListComponent } from './mailing-list/mailing-list.component';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { ContactComponent } from './contact/contact.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { ArtworkComponent } from './artwork/artwork.component';
-import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { LocationComponent } from './components/location/location.component';
+import { MailingListComponent } from './components/mailing-list/mailing-list.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 import { AgmCoreModule } from '@agm/core';
-import { StoryComponent } from './story/story.component'
+import { StoryComponent } from './components/story/story.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ContactModule } from './contact/contact.module';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent,
     PageNotFoundComponent,
     LocationComponent,
     MailingListComponent,
-    ContactComponent,
     NavbarComponent,
-    ArtworkComponent,
     FooterComponent,
     StoryComponent
   ],
@@ -35,10 +32,12 @@ import { StoryComponent } from './story/story.component'
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAKURpa8WrRHysyqCF5vGJrPOuI6G_hx80'
     }),
-    BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule,
-    FormsModule
+    BrowserModule,
+    ContactModule,
+    HomeModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ContactService } from '../../shared/contact.service';
 
 @Component({
   templateUrl: './contact.component.html',
@@ -13,14 +15,20 @@ export class ContactComponent implements OnInit {
     comments: new FormControl('', [Validators.required, Validators.minLength(10)]),
   });
 
-  constructor() { }
+  constructor(private router: Router, private contactService: ContactService) { }
 
   ngOnInit() {
   }
 
   submitForm() {
-    const name = this.contactForm.get('name');
-    console.log(name.value);
+    console.log(this.name.value + ' (' + this.email.value + ')\n' + this.comments.value);
+
+    this.contactService.send(this.name.value, this.email.value, this.comments.value).subscribe(
+      data => {
+        // Page redirect when getting response
+        this.router.navigate(['/home']);
+      }
+    );
   }
 
   get name() { return this.contactForm.get('name'); }

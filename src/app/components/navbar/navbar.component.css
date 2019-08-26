@@ -8,10 +8,6 @@
   z-index: 1;
 }
 
-.navbar__logo {
-  display: none;
-}
-  
 .navbar__menu {
   margin: 0;
   padding: 0;
@@ -115,11 +111,7 @@
     margin-top: 15px;
     position: relative;
   }
-
-  .navbar__logo {
-    display: inline-block;
-  }
-
+  
   .navbar__menu-container {
     display: inline-flex;
     width: 90%;
@@ -150,9 +142,9 @@
     color: #4b6a88;
   }
 
-  .navbar__menuitem--home {
+/*   .navbar__menuitem--home {
     display: none;
-  }
+  } */
 
   .navbar__social-media-container {
     display: flex;

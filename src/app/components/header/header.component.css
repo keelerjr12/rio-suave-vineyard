@@ -7,16 +7,16 @@
   display: flex;
   z-index: 2;
 
-  transition-property: min-height;
+  transition-property: height;
   transition-duration: 2s;
 }
 
 .hero-image--full {
-  min-height: 540px;
+  height: 95vh;
 }
 
 .hero-image--short {
-  min-height: 250px;
+  height: 200px;
 }
 
 .hero--overlay {
@@ -26,12 +26,12 @@
   background-image: url('/assets/mobile_logo_fixed_blured.png');
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 250px;
+  min-height: 300px;
   width: 350px;
 }
 
 @media screen and (min-width: 768px) {
   .hero-image {
-    margin-top: -195px;
+    margin-top: -51px; /* TODO: Fix this to use height only */
   }
 }

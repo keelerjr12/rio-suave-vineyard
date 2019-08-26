@@ -1,20 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
-import { LocationComponent } from './location/location.component';
-import { StoryComponent } from './story/story.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { LocationComponent } from './components/location/location.component';
+import { StoryComponent } from './components/story/story.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
     path: 'home',
-    component: HomeComponent,
+    loadChildren: () => import('./home/home.module').then(mod => mod.HomeModule),
     data: {title: 'Home'}
   },
   {
     path: 'contact',
-    component: ContactComponent,
+    loadChildren: () => import('./contact/contact.module').then(mod => mod.ContactModule),
     data: {title: 'Contact'}
   },
   {
