@@ -12,11 +12,11 @@ export class ContactService {
 
   send(name: string, email: string, comments: string): Observable<object> {
     console.log(name, email, comments);
-    
+
     const body = {
-      'name': name,
-      'email': email,
-      'comments': comments
+      name,
+      email,
+      comments
     };
 
     return this.http.post(environment.baseUrl + '/api/contact', body);
