@@ -1,3 +1,4 @@
+<h1>Send Us A Message</h1>
 <form class='contact-form' [formGroup]='contactForm' (ngSubmit)='submitForm()'> 
     <div class='contact-form__container'>
       <div>
@@ -37,7 +38,7 @@
         </div>
       </div>
       <div class='contact-form__submit-container'>
-          <input type='submit' value='Submit' [disabled]='!contactForm.valid'>
+          <input type='submit' [ngClass]="(contactForm.valid == true) ? 'contact-form__submit' : 'contact-form__submit--inactive'" value='Send Message' [disabled]='!contactForm.valid'>
       </div>
     </div>
   </form>

@@ -18,7 +18,7 @@
 }
 
 .home__button {
-  border: 2px solid #4F4F4F;
+  border: 2px solid #384A67;/* #4F4F4F;*/
   border-radius: 4px;
   color: #4F4F4F;
   display: inline-block;
@@ -27,7 +27,7 @@
 }
 
 .home__button:hover {
-  background-color: #4F4F4F;
+  background-color: /*#4F4F4F*/ #384A67;
   color: #ffffff;
 }
 
@@ -39,5 +39,9 @@
   .home__container {
     grid-template-areas:
       'content artwork';
+  }
+
+  .home__artwork {
+    margin: 2em 2em;
   }
 }

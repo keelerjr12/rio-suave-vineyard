@@ -10,6 +10,7 @@
 }
 
 .label {
+    color: #4F4F4F;
     display: block;
 }
 
@@ -26,8 +27,22 @@
     justify-content: center;
 }
 
+.contact-form__submit {
+    background-color: #88b375;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.contact-form__submit--inactive {
+    background-color: #fff;
+    border: solid rgb(212, 205, 205) 1px;
+    border-radius: 4px;
+    color: rgb(212, 205, 205);
+}
+
 .ng-valid[required], .ng-valid.required  {
-    border-left: 5px solid #42A948; /* green */
+    border-left: 5px solid #88b375; /* green */
   }
 
 .ng-invalid:not(form)  {
