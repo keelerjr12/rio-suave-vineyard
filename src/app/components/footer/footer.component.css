@@ -23,15 +23,11 @@
 .footer__data {
     display: inline-block;
     grid-area: data;
+    text-align: left;
 }
 
 .footer__data-container {
-    display: flex;
-}
-
-.footer__data-container > p {
-    display: block;
-    width: 100%;
+    text-align: center;
 }
 
 rs-mailing-list {

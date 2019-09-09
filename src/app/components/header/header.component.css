@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  flex-direction: column;
   z-index: 2;
 
   transition-property: height;
@@ -12,26 +13,63 @@
 }
 
 .hero-image--full {
-  height: 95vh;
+  height: calc(100vh - 62px);
 }
 
 .hero-image--short {
   height: 38vh;
 }
 
-.hero--overlay {
-  color: #ffffff;
+.header__container {
   margin: auto;
   text-align: center;
-  background-image: url('/assets/mobile_logo_fixed_blured.png');
+}
+
+.header__container--hidden {
+  display: none;
+}
+
+.header__logo {
+  background-image: url('/assets/mobile_logo_fixed_blurred.png');
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 100% 100%;
   min-height: 300px;
-  width: 350px;
+  min-width: 350px;
+  width: auto;
+  height: auto;
+}
+
+.header__link {
+  color: #ffffff;
+  font-size: 1.25em;
+  text-decoration: none;
+
+  border: 2px solid #ffffff;/* #4F4F4F;*/
+  border-radius: 4px;
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.header__link:hover {
+  background-color: #66a56a;
+  border-color: #66a56a;
+}
+
+.header__arrow {
+  text-align: center;
+}
+
+.header__arrow--hidden {
+  display:none ;
 }
 
 @media screen and (min-width: 768px) {
   .hero-image {
     margin-top: -51px; /* TODO: Fix this to use height only */
+  }
+
+  .hero-image--full {
+    height: 100vh;
   }
 }
