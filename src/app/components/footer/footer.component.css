@@ -3,31 +3,37 @@
     /*background-image: linear-gradient(rgba(217, 199, 139), rgba(236, 227, 197));
     */display: grid;
     grid-template-areas: 
-        'logo'
-        'data'
+        'company-data'
+        'sitemap'
         'mailing-list'
         'social-media'
         'copyright';
 }
 
+.footer__data-container {
+    grid-area: company-data;
+    text-align: center;
+}
+
 .footer__logo-container {
-    display: flex;
-    justify-content: center;
-    grid-area: logo;
+    width: 100%;
 }
 
 .footer__logo {
-    max-width: 15%;
+    max-width: 20%;
 }
 
-.footer__data {
-    display: inline-block;
-    grid-area: data;
+.footer__contact-container {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__contact {
     text-align: left;
 }
 
-.footer__data-container {
-    text-align: center;
+.sitemap {
+    grid-area: sitemap;
 }
 
 rs-mailing-list {
@@ -44,12 +50,12 @@ rs-mailing-list {
 @media (min-width: 550px) {
     .footer {
       grid-template-areas:
-        'logo data mailing-list'
+        'company-data sitemap mailing-list'
         'social-media social-media social-media'
         'copyright copyright copyright';
     }
 
     .footer__logo {
-        max-width: 50%;
+        max-width: 30%;
     }
   }

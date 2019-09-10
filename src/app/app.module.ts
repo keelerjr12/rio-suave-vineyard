@@ -16,10 +16,13 @@ import { StoryComponent } from './components/story/story.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactModule } from './contact/contact.module';
 import { HomeModule } from './home/home.module';
+import { ArtworkComponent } from './components/artwork/artwork.component';
+import { environment } from 'src/environments/environment.prod';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ArtworkComponent,
     HeaderComponent,
     PageNotFoundComponent,
     LocationComponent,
@@ -30,7 +33,7 @@ import { HomeModule } from './home/home.module';
   ],
   imports: [
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAKURpa8WrRHysyqCF5vGJrPOuI6G_hx80'
+      apiKey: environment.apiKey
     }),
     AppRoutingModule,
     BrowserModule,
