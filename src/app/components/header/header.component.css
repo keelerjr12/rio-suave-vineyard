@@ -21,8 +21,11 @@
 }
 
 .header__container {
-  margin: auto;
-  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
 }
 
 .header__container--hidden {
@@ -33,35 +36,34 @@
   background-image: url('/assets/mobile_logo_fixed_blurred.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 100%;
-  min-height: 300px;
-  min-width: 350px;
-  width: auto;
-  height: auto;
+  background-size: contain;
+  height: 100%;
+  max-height: 350px;
+  max-width: 350px;
+  width: 100%;
 }
 
 .header__link {
+  border: 2px solid #ffffff;
+  border-radius: 4px;
   color: #ffffff;
   font-size: 1.25em;
-  text-decoration: none;
-
-  border: 2px solid #ffffff;/* #4F4F4F;*/
-  border-radius: 4px;
-  display: inline-block;
   padding: 10px 20px;
+  text-decoration: none;
 }
 
 .header__link:hover {
-  background-color: #66a56a;
-  border-color: #66a56a;
+  background-color: #51627C;
+  border-color: #51627C;
 }
 
 .header__arrow {
+  display: none;
   text-align: center;
 }
 
 .header__arrow--hidden {
-  display:none ;
+  display: none ;
 }
 
 @media screen and (min-width: 768px) {
@@ -71,5 +73,11 @@
 
   .hero-image--full {
     height: 100vh;
+  }
+}
+
+@media screen and (min-height: 400px) {
+  .header__arrow {
+    display: block;
   }
 }

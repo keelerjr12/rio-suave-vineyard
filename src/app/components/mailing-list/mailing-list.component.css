@@ -3,6 +3,7 @@
 }
 
 .mailing-list__header {
+    color: #000;
     margin: 0;
 }
 
@@ -13,7 +14,8 @@
 
 .mailing-list__email-inner-wrapper {
     margin: 10px;
-    width: fit-content;
+    max-width: 480px;
+    width: 100%;
 }
 
 .mailing-list__label {
@@ -22,7 +24,7 @@
 }
 
 .mailing-list__input {
-    min-width: 320px;
+    width: 100%;
 }
 
 .mailing-list__submit {
