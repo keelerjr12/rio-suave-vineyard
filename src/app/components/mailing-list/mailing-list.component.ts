@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { MailingListService } from 'src/app/shared/services/mailing-list.service';
+import { MailingListService } from 'src/app/modules/shared/services/mailing-list.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'rs-mailing-list',
@@ -15,7 +16,7 @@ export class MailingListComponent implements OnInit {
 
   isSubscribed = false;
 
-  constructor(private mailingListService: MailingListService) {
+  constructor(private toastr: ToastrService, private mailingListService: MailingListService) {
   }
 
   ngOnInit() {
@@ -24,6 +25,10 @@ export class MailingListComponent implements OnInit {
 
   onSubscribe() {
     console.log(this.email.value);
+    this.toastr.success('Hey, we made it this far', 'Notification', {
+      positionClass: 'toast-bottom-center',
+    });
+    /*
     this.mailingListService.subscribe(this.email.value).subscribe(
       res => {
         this.markSubscribed();
@@ -31,7 +36,7 @@ export class MailingListComponent implements OnInit {
       err => {
         console.log('failed mailing list subscription');
       }
-    );
+    );*/
   }
 
   markSubscribed(){

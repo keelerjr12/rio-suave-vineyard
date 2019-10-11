@@ -348,7 +348,7 @@ template {
 }
 
 body {
-  background-color: #ded3a6;
+  background-color: #E6DEC1;
   color: #4F4F4F;
   padding-bottom: 62px;
   font-family: Lora;
@@ -378,4 +378,10 @@ input {
   body {
     padding: 0;
   }
+}
+
+@import “../node_modules/ngx-toastr/toastr.css”;
+
+.ngx-toastr {
+  background-color: black;
 }

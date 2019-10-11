@@ -1,0 +1,32 @@
+.story__container-outside {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.story__container {
+  max-width: 1366px;
+}
+
+.story__content {
+  margin: 1em 1em;
+  padding: 0;
+  text-align: left;
+}
+
+@media (min-width: 640px) {
+
+  .story__container {
+    align-items: center;
+    display: flex;
+    max-width: 1366px;
+  }
+
+  .story__content {
+    max-width: 50%;
+  }
+
+  .story__artwork {
+    padding: 1em;
+  }
+}

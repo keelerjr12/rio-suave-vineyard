@@ -1,5 +1,5 @@
 .footer {
-    background-color: #ded3a6; /*#D9C78B;*/
+    background-color: #E6DEC1; /*#D9C78B;*/
     /*background-image: linear-gradient(rgba(217, 199, 139), rgba(236, 227, 197));
     */display: flex;
     justify-content: center;
@@ -30,6 +30,7 @@
 
 .footer__logo {
     max-width: 20%;
+    min-width: 160px;
 }
 
 .footer__contact-container {
@@ -45,12 +46,6 @@
     display: none;
     grid-area: sitemap;
     text-align: center;
-}
-
-.footer__sitemap-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 .footer__mailing-list {
@@ -78,10 +73,6 @@
         grid-template-areas:
             'company-data sitemap mailing-list'
             'copyright copyright copyright';
-    }
-
-    .footer__logo {
-        max-width: 30%;
     }
 
     .footer__sitemap {

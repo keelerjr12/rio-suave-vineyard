@@ -5,22 +5,22 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then(mod => mod.HomeModule),
+    loadChildren: () => import('./modules/home/home.module').then(mod => mod.HomeModule),
     data: {title: 'Home'}
   },
   {
     path: 'contact',
-    loadChildren: () => import('./contact/contact.module').then(mod => mod.ContactModule),
+    loadChildren: () => import('./modules/contact/contact.module').then(mod => mod.ContactModule),
     data: {title: 'Contact'}
   },
   {
     path: 'location',
-    loadChildren: () => import('./location/location.module').then(mod => mod.LocationModule),
+    loadChildren: () => import('./modules/location/location.module').then(mod => mod.LocationModule),
     data: {title: 'Location'}
   },
   {
     path: 'story',
-    loadChildren: () => import('./story/story.module').then(mod => mod.StoryModule),
+    loadChildren: () => import('./modules/story/story.module').then(mod => mod.StoryModule),
     data: {title: 'Story'}
   },
   {

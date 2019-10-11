@@ -1,0 +1,11 @@
+
+.sitemap {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sitemap__link {
+    color: #4F4F4F;
+    text-decoration: none;
+}

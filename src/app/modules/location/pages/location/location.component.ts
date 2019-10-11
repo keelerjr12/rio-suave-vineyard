@@ -1,7 +1,6 @@
 /// <reference types="@types/googlemaps"
 import { } from 'googlemaps';
 import { Component, OnInit } from '@angular/core';
-import { ViewChild } from '@angular/core';
 
 @Component({
   templateUrl: './location.component.html',
