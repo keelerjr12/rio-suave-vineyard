@@ -20,28 +20,20 @@ export class MailingListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.isSubscribed = localStorage.getItem('mailingListSubscribed') === 'true';
   }
 
   onSubscribe() {
-    console.log(this.email.value);
-    this.toastr.success('Hey, we made it this far', 'Notification', {
-      positionClass: 'toast-bottom-center',
-    });
-    /*
+
     this.mailingListService.subscribe(this.email.value).subscribe(
       res => {
-        this.markSubscribed();
+        this.toastr.success('You have subscribed!', 'Success', {
+          positionClass: 'toast-bottom-center',
+        });
       },
       err => {
         console.log('failed mailing list subscription');
       }
-    );*/
-  }
-
-  markSubscribed(){
-    localStorage.setItem('mailingListSubscribed', 'true');
-    this.isSubscribed = true;
+    );
   }
 
   get email() { return this.subscriptionForm.get('email'); }
