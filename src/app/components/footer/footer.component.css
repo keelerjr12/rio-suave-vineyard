@@ -10,7 +10,6 @@
     grid-template-areas: 
     'company-data'
     'mailing-list'
-    'social-media'
     'copyright';
     max-width: 1366px;
     width: 100%;
@@ -45,6 +44,7 @@
 .footer__sitemap {
     display: none;
     grid-area: sitemap;
+    text-align: center;
 }
 
 .footer__sitemap-list {
@@ -53,8 +53,7 @@
     padding: 0;
 }
 
-rs-mailing-list {
-    display:inline-block;
+.footer__mailing-list {
     grid-area: mailing-list;
 }
 
@@ -69,7 +68,6 @@ rs-mailing-list {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
             'company-data mailing-list'
-            'social-media social-media'
             'copyright copyright';
     }
   }
@@ -79,7 +77,6 @@ rs-mailing-list {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
             'company-data sitemap mailing-list'
-            'social-media social-media social-media'
             'copyright copyright copyright';
     }
 
@@ -88,7 +85,6 @@ rs-mailing-list {
     }
 
     .footer__sitemap {
-        display: flex;
-        justify-content: center;
+        display: block;
     }
   }

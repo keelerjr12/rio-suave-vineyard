@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { MailingListService } from 'src/app/shared/mailing-list.service';
+import { MailingListService } from 'src/app/shared/services/mailing-list.service';
 
 @Component({
   selector: 'rs-mailing-list',

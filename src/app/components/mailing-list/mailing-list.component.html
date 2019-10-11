@@ -1,5 +1,5 @@
 <div class='mailing-list'>
-  <h3 class='mailing-list__header'>Stay Connected!</h3>
+  <h2>Mailing List</h2>
   <form [formGroup]="subscriptionForm" (ngSubmit)="onSubscribe()" [ngStyle]="{ display: (isSubscribed === true) ? 'none' : 'block' }">
     <div class='mailing-list__email-outer-wrapper'>
         <div class='mailing-list__email-inner-wrapper'>
@@ -10,4 +10,15 @@
     <button class='mailing-list__submit' type="submit">Subscribe</button>
   </form>
   <p [ngStyle]="{ display: (isSubscribed === true) ? 'block' : 'none' }">Subscribed to our mailing list!</p>
+  <div>
+    <h2>Social Media</h2>
+    <div class='social-media'>
+        <a href='https://www.facebook.com/Rio-Suave-Vineyard-135469280631789/posts/' target="_blank">
+            <img src='../../assets/facebook-logo-footer.png' />
+        </a>
+        <a href="https://www.instagram.com/rio_suave_vineyard/" target='_blank'>
+            <img src='../../assets/instagram-logo-footer.png' />
+        </a>
+    </div>
+  </div>
 </div>

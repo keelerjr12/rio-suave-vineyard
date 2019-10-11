@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LocationComponent } from './components/location/location.component';
-import { StoryComponent } from './components/story/story.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
@@ -17,12 +15,12 @@ const routes: Routes = [
   },
   {
     path: 'location',
-    component: LocationComponent,
+    loadChildren: () => import('./location/location.module').then(mod => mod.LocationModule),
     data: {title: 'Location'}
   },
   {
     path: 'story',
-    component: StoryComponent,
+    loadChildren: () => import('./story/story.module').then(mod => mod.StoryModule),
     data: {title: 'Story'}
   },
   {

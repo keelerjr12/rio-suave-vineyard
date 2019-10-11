@@ -5,42 +5,36 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { LocationComponent } from './components/location/location.component';
 import { MailingListComponent } from './components/mailing-list/mailing-list.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 
-import { AgmCoreModule } from '@agm/core';
-import { StoryComponent } from './components/story/story.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactModule } from './contact/contact.module';
 import { HomeModule } from './home/home.module';
-import { ArtworkComponent } from './components/artwork/artwork.component';
-import { environment } from 'src/environments/environment.prod';
+import { LocationModule } from './location/location.module';
+import { StoryModule } from './story/story.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArtworkComponent,
     HeaderComponent,
     PageNotFoundComponent,
-    LocationComponent,
     MailingListComponent,
     NavbarComponent,
-    FooterComponent,
-    StoryComponent
+    FooterComponent
   ],
   imports: [
-    AgmCoreModule.forRoot({
-      apiKey: environment.apiKey
-    }),
+
     AppRoutingModule,
     BrowserModule,
     ContactModule,
     HomeModule,
+    LocationModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    StoryModule
   ],
   providers: [],
   bootstrap: [AppComponent]
