@@ -20,13 +20,14 @@ export class MailingListComponent implements OnInit {
   }
 
   ngOnInit() {
+
   }
 
   onSubscribe() {
 
     this.mailingListService.subscribe(this.email.value).subscribe(
       res => {
-        this.toastr.success('You have subscribed!', 'Success', {
+        this.toastr.success('You have subscribed!!', 'Success', {
           positionClass: 'toast-bottom-center',
         });
       },
