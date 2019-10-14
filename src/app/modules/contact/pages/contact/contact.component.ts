@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ContactService } from '../../shared/contact.service';
 import { IContactDetails } from '../../shared/IContactDetails';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   templateUrl: './contact.component.html',
@@ -9,7 +10,7 @@ import { IContactDetails } from '../../shared/IContactDetails';
 })
 export class ContactComponent implements OnInit {
 
-  constructor(private router: Router, private contactService: ContactService) { }
+  constructor(private router: Router, private contactService: ContactService, private toastr: ToastrService) { }
 
   ngOnInit() {
   }
@@ -18,7 +19,11 @@ export class ContactComponent implements OnInit {
     console.log(contactDetails);
 
     this.contactService.send(contactDetails.name, contactDetails.email, contactDetails.comments).subscribe(
-      data => {
+      res => {
+        this.toastr.success('We have received your message!', 'Thank You!', {
+          positionClass: 'toast-bottom-center',
+        });
+
         this.router.navigate(['/home']);
       }
     );

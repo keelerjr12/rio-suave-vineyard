@@ -24,17 +24,24 @@ export class MailingListComponent implements OnInit {
   }
 
   onSubscribe() {
+    const email = this.email.value;
+    this.subscriptionForm.disable();
 
-    this.mailingListService.subscribe(this.email.value).subscribe(
+    this.mailingListService.subscribe(email).subscribe(
       res => {
-        this.toastr.success('You have subscribed!!', 'Success', {
+        this.toastr.success('You have subscribed!', 'Success', {
           positionClass: 'toast-bottom-center',
         });
       },
       err => {
-        console.log('failed mailing list subscription');
+        this.toastr.error('Unable to subscribe you to the mailing list', 'Failure', {
+          positionClass: 'toast-bottom-center',
+        });
       }
     );
+
+    this.subscriptionForm.reset();
+    this.subscriptionForm.enable();
   }
 
   get email() { return this.subscriptionForm.get('email'); }

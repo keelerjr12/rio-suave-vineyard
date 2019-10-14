@@ -18,6 +18,7 @@ import { HomeModule } from './modules/home/home.module';
 import { LocationModule } from './modules/location/location.module';
 import { StoryModule } from './modules/story/story.module';
 import { ToastrModule } from 'ngx-toastr';
+import { SocialMediaComponent } from './components/social-media/social-media.component';
 
 @NgModule({
   declarations: [
@@ -27,10 +28,10 @@ import { ToastrModule } from 'ngx-toastr';
     MailingListComponent,
     NavbarComponent,
     FooterComponent,
-    SitemapComponent
+    SitemapComponent,
+    SocialMediaComponent
   ],
   imports: [
-
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,

@@ -9,6 +9,11 @@ const routes: Routes = [
     data: {title: 'Home'}
   },
   {
+    path: 'admin',
+    loadChildren: () => import('./modules/admin/admin.module').then(mod => mod.AdminModule),
+    data: {title: 'Admin'}
+  },
+  {
     path: 'contact',
     loadChildren: () => import('./modules/contact/contact.module').then(mod => mod.ContactModule),
     data: {title: 'Contact'}
