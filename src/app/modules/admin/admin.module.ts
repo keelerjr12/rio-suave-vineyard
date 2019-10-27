@@ -6,6 +6,7 @@ import { AdminComponent } from './pages/admin/admin.component';
 import { SharedModule } from '../shared/shared.module';
 import { EventsComponent } from './pages/events/events.component';
 import { AddEventComponent } from './components/add-event/add-event.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { AddEventComponent } from './components/add-event/add-event.component';
   imports: [
     CommonModule,
     AdminRoutingModule,
+    ReactiveFormsModule,
     SharedModule
   ]
 })

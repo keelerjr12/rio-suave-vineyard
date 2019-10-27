@@ -15,13 +15,18 @@ export class AuthService {
 
   public isAuthenticated(): boolean {
 
-    const token = localStorage.getItem('token');
+    const token = this.getAuthenticationToken();
 
     if (token === null) {
       return false;
     }
 
     return true;
+  }
+
+  public getAuthenticationToken(): string {
+    const token = localStorage.getItem('token');
+    return token;
   }
 
   public login(username: string, password: string): Observable<void> {

@@ -12,7 +12,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SitemapComponent } from './components/sitemap/sitemap.component';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ContactModule } from './modules/contact/contact.module';
 import { HomeModule } from './modules/home/home.module';
 import { LocationModule } from './modules/location/location.module';
@@ -21,6 +21,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
 import { LoginModule } from './modules/login/login.module';
 import { EventsModule } from './modules/events/events.module';
+import { AuthInterceptor } from './http-interceptors/auth-interceptor';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,13 @@ import { EventsModule } from './modules/events/events.module';
     StoryModule,
     ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
