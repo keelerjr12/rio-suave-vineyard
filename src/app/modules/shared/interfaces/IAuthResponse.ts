@@ -1,0 +1,3 @@
+interface IAuthResponse {
+    token: string;
+}

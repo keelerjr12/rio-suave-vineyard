@@ -19,6 +19,8 @@ import { LocationModule } from './modules/location/location.module';
 import { StoryModule } from './modules/story/story.module';
 import { ToastrModule } from 'ngx-toastr';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
+import { LoginModule } from './modules/login/login.module';
+import { EventsModule } from './modules/events/events.module';
 
 @NgModule({
   declarations: [
@@ -36,8 +38,10 @@ import { SocialMediaComponent } from './components/social-media/social-media.com
     BrowserModule,
     BrowserAnimationsModule,
     ContactModule,
+    EventsModule,
     HomeModule,
     LocationModule,
+    LoginModule,
     HttpClientModule,
     ReactiveFormsModule,
     StoryModule,

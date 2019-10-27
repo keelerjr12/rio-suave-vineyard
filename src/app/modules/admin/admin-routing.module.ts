@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './pages/admin/admin.component';
-import { LoginComponent } from './pages/login/login.component';
 import { AuthGuardService } from './shared/auth-guard.service';
+import { EventsComponent } from './pages/events/events.component';
 
 
 const routes: Routes = [
@@ -12,8 +12,9 @@ const routes: Routes = [
     canActivate: [AuthGuardService]
   },
   {
-    path: 'login',
-    component: LoginComponent
+    path: 'events',
+    component: EventsComponent,
+    canActivate: [AuthGuardService]
   }
 ];
 

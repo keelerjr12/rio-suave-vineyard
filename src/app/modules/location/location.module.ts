@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
   declarations: [
     LocationComponent
   ],
-  imports: [    
+  imports: [
     AgmCoreModule.forRoot({
     apiKey: environment.apiKey
     }),

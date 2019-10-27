@@ -19,9 +19,19 @@ const routes: Routes = [
     data: {title: 'Contact'}
   },
   {
+    path: 'events',
+    loadChildren: () => import('./modules/events/events.module').then(mod => mod.EventsModule),
+    data: {title: 'Events'}
+  },
+  {
     path: 'location',
     loadChildren: () => import('./modules/location/location.module').then(mod => mod.LocationModule),
     data: {title: 'Location'}
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./modules/login/login.module').then(mod => mod.LoginModule),
+    data: {title: 'Login'}
   },
   {
     path: 'story',
