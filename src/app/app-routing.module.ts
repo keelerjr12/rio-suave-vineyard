@@ -20,7 +20,7 @@ const routes: Routes = [
   },
   {
     path: 'events',
-    loadChildren: () => import('./modules/events/events.module').then(mod => mod.EventsModule),
+    loadChildren: () => import('./modules/user-events/user-events.module').then(mod => mod.UserEventsModule),
     data: {title: 'Events'}
   },
   {

@@ -20,8 +20,8 @@ import { StoryModule } from './modules/story/story.module';
 import { ToastrModule } from 'ngx-toastr';
 import { SocialMediaComponent } from './components/social-media/social-media.component';
 import { LoginModule } from './modules/login/login.module';
-import { EventsModule } from './modules/events/events.module';
 import { AuthInterceptor } from './http-interceptors/auth-interceptor';
+import { UserEventsModule } from './modules/user-events/user-events.module';
 
 @NgModule({
   declarations: [
@@ -39,7 +39,7 @@ import { AuthInterceptor } from './http-interceptors/auth-interceptor';
     BrowserModule,
     BrowserAnimationsModule,
     ContactModule,
-    EventsModule,
+    UserEventsModule,
     HomeModule,
     LocationModule,
     LoginModule,

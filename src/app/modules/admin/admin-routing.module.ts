@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './pages/admin/admin.component';
 import { AuthGuardService } from './shared/auth-guard.service';
-import { EventsComponent } from './pages/events/events.component';
+import { AdminEventsComponent } from './pages/admin-events/admin-events.component';
 
 
 const routes: Routes = [
@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: 'events',
-    component: EventsComponent,
+    component: AdminEventsComponent,
     canActivate: [AuthGuardService]
   }
 ];

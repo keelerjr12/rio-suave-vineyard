@@ -23,6 +23,7 @@
     "@types/googlemaps": "^3.37.7",
     "core-js": "^2.6.9",
     "ngx-toastr": "^11.1.0",
+    "open-iconic": "^1.1.1",
     "rxjs": "~6.5.3",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

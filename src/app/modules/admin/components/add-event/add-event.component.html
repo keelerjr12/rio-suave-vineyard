@@ -1,8 +1,10 @@
 <form [formGroup]='addEventFrm' (ngSubmit)='submitForm()'>
     <input formControlName='name' type="text">
-    <input formControlName='startDate'type="date">
-    <input formControlName='startTime'type='time'>
-    <input formControlName='endDate'type="date">
-    <input formControlName='endTime'type='time'>
+    <input formControlName='startDate' type="date">
+    <input formControlName='startTime' type='time'>
+    <input formControlName='endDate' type="date">
+    <input formControlName='endTime' type='time'>
+    <input formControlName='location' type='text'>
+    <input formControlName='description' type='text'>
     <input type="submit" value="Add">
 </form>

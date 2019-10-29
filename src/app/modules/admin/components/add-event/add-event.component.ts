@@ -16,6 +16,7 @@ export class AddEventComponent implements OnInit {
     startTime: new FormControl(''),
     endDate: new FormControl(''),
     endTime: new FormControl(''),
+    location: new FormControl(''),
     description: new FormControl('', [Validators.required, Validators.minLength(5)])
   });
 
@@ -30,11 +31,15 @@ export class AddEventComponent implements OnInit {
     console.log(this.startTime);
     console.log(this.endDate);
     console.log(this.endTime);
+    console.log(this.location);
+    console.log(this.description);
 
     const rsevent = new RSEvent();
     rsevent.name = this.name;
     rsevent.dateTimeStart = new Date(this.startDate);
     rsevent.dateTimeEnd = new Date(this.endDate);
+    rsevent.location = this.location;
+    rsevent.description = this.description;
 
     console.log(rsevent);
 
@@ -46,4 +51,6 @@ export class AddEventComponent implements OnInit {
   get startTime() { return this.addEventFrm.get('startTime').value; }
   get endDate() { return this.addEventFrm.get('endDate').value; }
   get endTime() { return this.addEventFrm.get('endTime').value; }
+  get location() { return this.addEventFrm.get('location').value; }
+  get description() { return this.addEventFrm.get('description').value; }
 }

@@ -1,0 +1,11 @@
+<h1>Upcoming Events</h1>
+<div class='events'>
+    <ul>
+        <li *ngFor="let event of events">
+            <h6>{{ event.name }}</h6>
+            <p>{{ event.dateTimeStart | date:'medium' }} to {{ event.dateTimeEnd | date:'medium' }}</p>
+            <p>{{ event.location }}</p>
+            <p>{{ event.description }}</p>
+        </li>
+    </ul>
+</div>
