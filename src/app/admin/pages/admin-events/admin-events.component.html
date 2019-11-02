@@ -1,0 +1,22 @@
+<h1>Upcoming Events</h1>
+
+<rs-add-event></rs-add-event>
+
+<div class='events'>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Remove</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let event of events">
+                <td>{{ event.name }}</td>
+                <td>{{ event.dateTimeStart | date:'MMM d, yyyy (h:mm a)' }}</td>
+                <td>{{ event.dateTimeEnd | date:'MMM d, yyyy (h:mm a)' }}</td>
+                <td><button (click)='deleteEvent(event.id)'><img src="/open-iconic/svg/delete.svg"></button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

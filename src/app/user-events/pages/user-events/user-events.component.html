@@ -1,0 +1,23 @@
+<h1>Upcoming Events</h1>
+<div class='events'>
+    <ul class='events__list'>
+        <li *ngFor="let event of events" class='events__item'>
+            <div class='events__date--container'>
+                <div class='events__date'>
+                        <div class='events__date--day'>
+                            {{ event.dateTimeStart | date: 'd' }}
+                        </div>
+                        <div>
+                            {{ event.dateTimeStart | date: 'MMM' }}
+                        </div>
+                    </div>
+            </div>
+            <div class='events__data'>
+                <h6 class='events__name'>{{ event.name }}</h6>
+                <p>{{ event.dateTimeStart | date:'MMM d, yyyy (h:mm a)' }} to {{ event.dateTimeEnd | date:'MMM d, yyyy (h:mm a)' }}</p>
+                <p>{{ event.location }}</p>
+                <p>{{ event.description }}</p>
+            </div>
+        </li>
+    </ul>
+</div>

@@ -1,41 +1,41 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./modules/home/home.module').then(mod => mod.HomeModule),
+    loadChildren: () => import('./home/home.module').then(mod => mod.HomeModule),
     data: {title: 'Home'}
   },
   {
     path: 'admin',
-    loadChildren: () => import('./modules/admin/admin.module').then(mod => mod.AdminModule),
+    loadChildren: () => import('./admin/admin.module').then(mod => mod.AdminModule),
     data: {title: 'Admin'}
   },
   {
     path: 'contact',
-    loadChildren: () => import('./modules/contact/contact.module').then(mod => mod.ContactModule),
+    loadChildren: () => import('./contact/contact.module').then(mod => mod.ContactModule),
     data: {title: 'Contact'}
   },
   {
     path: 'events',
-    loadChildren: () => import('./modules/user-events/user-events.module').then(mod => mod.UserEventsModule),
+    loadChildren: () => import('./user-events/user-events.module').then(mod => mod.UserEventsModule),
     data: {title: 'Events'}
   },
   {
     path: 'location',
-    loadChildren: () => import('./modules/location/location.module').then(mod => mod.LocationModule),
+    loadChildren: () => import('./location/location.module').then(mod => mod.LocationModule),
     data: {title: 'Location'}
   },
   {
     path: 'login',
-    loadChildren: () => import('./modules/login/login.module').then(mod => mod.LoginModule),
+    loadChildren: () => import('./login/login.module').then(mod => mod.LoginModule),
     data: {title: 'Login'}
   },
   {
     path: 'story',
-    loadChildren: () => import('./modules/story/story.module').then(mod => mod.StoryModule),
+    loadChildren: () => import('./story/story.module').then(mod => mod.StoryModule),
     data: {title: 'Story'}
   },
   {
