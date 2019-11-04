@@ -1,5 +1,6 @@
 .events {
     background-color: #fff;
+    padding: 1em 0;
 }
 
 .events__list {
@@ -9,24 +10,26 @@
 }
 
 .events__item {
-    align-items: center;;
+    align-items: center;
+    border: solid 2px #4F4F4F;
     display: flex;
-    height: 200px;
-    padding: 1em 0;
+    margin: 1em 0;
+}
+
+.events__item-container {
+    width: 100%;
 }
 
 .events__date--container {
-    background-color: #AF2F00;
+    background-color: #51627C;
     display: flex;
     flex-direction: column;
-    height: 100%;
     justify-content: center;
     vertical-align: top;
-    width: 10%;
 }
 
 .events__date {
-    color: #000;
+    color: #fff;
     text-align: center;
     width: 100%;
 }
@@ -37,11 +40,31 @@
 
 .events__data {
     display: inline-block;
-    height: 100%;
-    width: 90%;
 }
 
 .events__name {
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 0;
 }
+
+.events__data > p {
+    margin: 0;
+}
+
+.events__item-description--collapsed {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 200px;
+  }
+
+  .events__item-description--expanded {
+      display: block;
+  }
+
+@media screen and (min-width: 400px) {
+    .events__item-container {
+      display: flex;
+    }
+  }
