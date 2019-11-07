@@ -5,4 +5,5 @@ export class RSEvent {
     dateTimeEnd: Date;
     location: string;
     description: string;
+    imageUrl: string;
 }

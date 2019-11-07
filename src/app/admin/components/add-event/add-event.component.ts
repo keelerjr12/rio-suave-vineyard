@@ -17,8 +17,12 @@ export class AddEventComponent implements OnInit {
     endDate: new FormControl(''),
     endTime: new FormControl(''),
     location: new FormControl(''),
-    description: new FormControl('', [Validators.required, Validators.minLength(5)])
+    description: new FormControl('', [Validators.required, Validators.minLength(5)]),
+    image: new FormControl('')
   });
+
+  fileData: File;
+  previewUrl: string | ArrayBuffer;
 
   constructor(private eventsService: EventsService) { }
 
@@ -26,14 +30,6 @@ export class AddEventComponent implements OnInit {
   }
 
   submitForm(): void {
-    console.log(this.name);
-    console.log(this.startDate);
-    console.log(this.startTime);
-    console.log(this.endDate);
-    console.log(this.endTime);
-    console.log(this.location);
-    console.log(this.description);
-
     const rsevent = new RSEvent();
     rsevent.name = this.name;
     rsevent.dateTimeStart = new Date(this.startDate + ' ' + this.startTime);
@@ -43,8 +39,30 @@ export class AddEventComponent implements OnInit {
 
     console.log(rsevent);
 
-    this.eventsService.addEvent(rsevent).subscribe();
+    const formData = new FormData();
+    formData.append('file', this.fileData);
+
+    this.eventsService.addEvent(rsevent, formData).subscribe();
   }
+
+  fileProgress(fileInput: any) {
+    this.fileData = fileInput.target.files[0] as File;
+    this.preview();
+  }
+
+  preview() {
+    // Show preview
+    const mimeType = this.fileData.type;
+    if (mimeType.match(/image\/*/) == null) {
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.readAsDataURL(this.fileData);
+    reader.onload = () => {
+      this.previewUrl = reader.result;
+    };
+}
 
   get name() { return this.addEventFrm.get('name').value; }
   get startDate() { return this.addEventFrm.get('startDate').value; }
@@ -53,4 +71,5 @@ export class AddEventComponent implements OnInit {
   get endTime() { return this.addEventFrm.get('endTime').value; }
   get location() { return this.addEventFrm.get('location').value; }
   get description() { return this.addEventFrm.get('description').value; }
+  get image() { return this.addEventFrm.get('image').value; }
 }

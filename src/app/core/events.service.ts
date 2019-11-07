@@ -23,6 +23,11 @@ export class EventsService {
       events.map(event => {
         event.dateTimeStart = new Date(event.dateTimeStart + 'Z');
         event.dateTimeEnd = new Date(event.dateTimeEnd + 'Z');
+
+        if (event.imageUrl !== '') {
+          event.imageUrl = environment.baseUrl + '/' + event.imageUrl;
+        }
+
         return map;
       });
 
@@ -35,8 +40,25 @@ export class EventsService {
     return this.eventSubject.asObservable();
   }
 
-  addEvent(event: RSEvent): Observable<void> {
-    return this.http.post<string>(environment.baseUrl + this.API_URL, event).pipe(map(
+  addEvent(event: RSEvent, formData: FormData): Observable<void> {
+
+    /*const blobOverrides = new Blob([JSON.stringify(event)], {
+      type: 'application/json',
+    });
+
+    formData.append('EventJsonInput', blobOverrides);*/
+    formData.append('EventJsonInput', JSON.stringify(event));
+    formData.forEach(e => { console.log(e); });
+
+    /*return this.http.post<void>(environment.baseUrl + this.API_URL, formData);
+    /*.subscribe(res => {
+      console.log(res);
+      //this.uploadedFilePath = res.data.filePath;
+      alert('SUCCESS !!');
+    })
+*/
+
+    return this.http.post<string>(environment.baseUrl + this.API_URL, formData).pipe(map(
       id => {
         event.id = id;
         this.events.push(event);

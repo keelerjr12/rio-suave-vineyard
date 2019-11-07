@@ -5,21 +5,29 @@
             <div class='events__item-container'>
                 <div class='events__date--container'>
                     <div class='events__date'>
-                            <div class='events__date--day'>
-                                {{ event.dateTimeStart | date: 'd' }}
-                            </div>
-                            <div>
-                                {{ event.dateTimeStart | date: 'MMM' }}
-                            </div>
+                        <div class='events__date-day'>
+                            {{ event.dateTimeStart | date: 'd' }}
+                        </div>
+                        <div class='events__date-month'>
+                            {{ event.dateTimeStart | date: 'MMM' }}
                         </div>
                     </div>
-                    <div class='events__data'>
-                        <button (click)="expandCollapseClick(i)">{{getExpColVal(i)}}</button>
-                        <h6 class='events__name'>{{ event.name }}</h6>
-                        <p>{{ event.dateTimeStart | date:'MMM d, yyyy (h:mm a)' }} to {{ event.dateTimeEnd | date:'MMM d, yyyy (h:mm a)' }}</p>
-                        <p>{{ event.location }}</p>
-                        <p [ngClass]="(isCollapsed(i)) ? 'events__item-description--collapsed' : 'events__item-description--expanded'">{{ event.description }}</p>
+                </div>
+                <div class='events__data'>
+                    <div class='events__data-header'>
+                        <h2 class='events__name'>{{ event.name }}</h2>
+                        <div class='events__expandable-btn-container'>
+                            <button [ngClass]="(collapsedElements[i]) ? 'events__expandable-btn--collapsed' : 'events__expandable-btn--expanded'" (click)="expandCollapseClick(i)">{{collapsedElementsValue[i]}}</button>
+                        </div>
                     </div>
+                    <p class='events__data-item'>{{ event.dateTimeStart | date:'MMM d, yyyy h:mm a' }} to {{ event.dateTimeEnd | date:'MMM d, yyyy h:mm a' }}</p>
+                    <p class='events__data-item events__location'>{{ event.location }}</p>
+                    <p [ngClass]="(isCollapsed(i)) ? 'events__item-description--collapsed' : 'events__item-description--expanded'">{{ event.description }}</p>
+                    <img [src]="event.imageUrl" [ngClass]="{
+                        'events__image': true,
+                        'events__image--hidden': collapsedElements[i] || event.imageUrl === ''
+                    }" />
+                </div>
             </div>
         </li>
     </ul>

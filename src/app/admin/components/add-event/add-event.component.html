@@ -6,5 +6,6 @@
     <input formControlName='endTime' type='time'>
     <input formControlName='location' type='text'>
     <input formControlName='description' type='text'>
+    <input formControlName='image' type='file' (change)="fileProgress($event)">
     <input type="submit" value="Add">
 </form>

@@ -26,16 +26,14 @@ export class UserEventsComponent implements OnInit {
 
   expandCollapseClick(id: number) {
     this.collapsedElements[id] = !this.collapsedElements[id];
+    this.collapsedElementsValue[id] = this.getExpColVal(this.collapsedElements[id]);
   }
 
   isCollapsed(id: number): boolean {
     return this.collapsedElements[id];
   }
 
-  getExpColVal(id: number): string {
-    // TODO: FIX FIRING EVENT MULTIPLE TIMES
-    
-    console.log(id);
-    return (this.collapsedElements[id]) ? '+' : '-';
+  private getExpColVal(val: boolean): string {
+    return val ? '+' : '-';
   }
 }
