@@ -6,6 +6,7 @@
   bottom: 0;
   width: 100%;
   background-color: #f0eeee;
+  padding: 0;
   z-index: 1;
 }
 
@@ -53,43 +54,20 @@
   width: 100%;
 }
 
-.navbar__icon--home {
-  background-image: url('/assets/home-icon--gray.png');
-}
-
-.navbar__icon-home--active {
-  background-image: url('/assets/home-icon--blue.png');
-}
-
-.navbar__icon--location {
-  background-image: url('/assets/location-icon--gray.png');
-}
-
-.navbar__icon-location--active {
-  background-image: url('/assets/location-icon--blue.png');
-}
-
-.navbar__icon--contact {
-  background-image: url('/assets/envelope-icon--gray.png');
-}
-
-.navbar__icon-contact--active {
-  background-image: url('/assets/envelope-icon--gray.png');
-}
-
 .navbar__linktext {
+  letter-spacing: .025em;
   margin: 0;
 }
 
 @media screen and (min-width: 768px) {
   .navbar {
     background: none;
-    margin-top: 15px;
     position: relative;
   }
   
   .navbar__menu-container {
     display: inline-flex;
+    margin: 30px 0;
     max-width: 1366px;
   }
 

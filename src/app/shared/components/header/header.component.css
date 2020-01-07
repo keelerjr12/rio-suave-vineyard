@@ -68,7 +68,7 @@
 
 @media screen and (min-width: 768px) {
   .hero-image {
-    margin-top: -51px; /* TODO: Fix this to use height only */
+    margin-top: -96px; /* TODO: Fix this to use height only */
   }
 
   .hero-image--full {

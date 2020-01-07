@@ -10,9 +10,13 @@
 }
 
 .artwork__caption {
-    color: #000;
+    color: #818182;
     font-size: .75em;
     line-height: 1;
     margin: 0;
     text-align: right;
+}
+
+.artwork__caption .alert-link {
+    color: #686868;
 }
